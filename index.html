@@ -5,9 +5,10 @@
     <script type=module>
         import Jo from "./joRenderer.js";
         window.Jo = Jo;
-        Jo.render({
-            path: "casa",
-            locals: { "time": + new Date() }
+        Jo.render({path: "test"}).then(()=>{
+            Jo.render({path: "body",method: "append"})
+            Jo.render({path: "casa",method: "append",locals: {"time": "luigi"}})
         })
+
     </script>
 </body>
